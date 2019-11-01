@@ -2,6 +2,7 @@
   "name": "myweathersapp",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://api.darksky.net/forecast/d127b645b951624418ee363b4532c9b2/",
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
