@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidUpdate() {
 
-    fetch('https://api.darksky.net/forecast/d127b645b951624418ee363b4532c9b2/'+this.state.myLat+','+this.state.myLong)
+    fetch('d127b645b951624418ee363b4532c9b2/'+this.state.myLat+','+this.state.myLong)
       .then(results => results.json())
       .then(json => {
         this.setState({
