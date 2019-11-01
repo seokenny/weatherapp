@@ -7,6 +7,7 @@ class App extends React.Component {
   state = { isItLoaded: false, receivedItems: [], myLat: 36.7783, myLong: 119.4179, hourlyWeekly: 'Daily', errorMessage: '', customLocation: false };
 
   componentDidMount() {
+    document.title = 'Weather DS';
     if(this.state.customLocation === false){
       window.navigator.geolocation.getCurrentPosition(
         (position) => this.setState({ myLat: position.coords.latitude, myLong: position.coords.longitude }),
