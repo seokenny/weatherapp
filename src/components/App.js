@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidUpdate() {
 
-    fetch('https://api.darksky.net/forecast/d127b645b951624418ee363b4532c9b2/'+this.state.myLat+','+this.state.myLong)
+    fetch('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/d127b645b951624418ee363b4532c9b2/'+this.state.myLat+','+this.state.myLong)
       .then(results => results.json())
       .then(json => {
         this.setState({
@@ -142,13 +142,13 @@ class App extends React.Component {
 
     if(!isItLoaded) {
       return <div className="gradient_bg gbg">
-        <h1 class="wt_center waiting_text">Loading Weather</h1>
+        <h1 className="wt_center waiting_text">Loading Weather</h1>
       </div>
     }
 
     if(this.state.errorMessage !== ''){
       return <div className="gradient_bg">
-        <h1 class="wt_center waiting_text">Geolocation must be allowed for us to retrieve weather</h1>
+        <h1 className="wt_center waiting_text">Geolocation must be allowed for us to retrieve weather</h1>
       </div>
     }
 
